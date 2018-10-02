@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.dao.EmployeeDao">
+    <sql id="table">tabple_emp</sql>
+    <sql id="selectFields">emp_id,emp_name,emp_salary,emp_age</sql>
+    <select id="selectByName" resultType="com.example.demo.mapper.entities.Employee">
+        SELECT
+        <include refid="selectFields"/>
+        FROM
+        <include refid="table"/>
+
+        WHERE emp_name = #{empName}
+
+    </select>
+</mapper>
+

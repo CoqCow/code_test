@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@MapperScan(basePackages = {"com.example.demo.mapper.mappers"})
+@MapperScan(basePackages = {"com.example.demo.mapper.dao"})
 public class DemoApplication {
 
     public static void main(String[] args) {
